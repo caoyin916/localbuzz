@@ -1,26 +1,22 @@
-/* ===== Buzz-AI brand theme =====
-   Overrides the "Chili Oil & Porcelain" tokens from
-   ../../template/css/styles.css with a SaaS-style indigo/violet + amber
-   palette for the Buzz-AI marketing site. Typography, radius, and shadow
-   shapes are intentionally left untouched so the shared component styles
-   (buttons, cards, feature bands, etc.) keep working as-is. */
+/* ===== Professional Green Theme ===== */
 :root {
-  /* Ink / neutrals */
-  --ink: #181A2A;
-  --ink-soft: #565B72;
-  --ink-mute: #9498AC;
-  --cream: #F6F7FB;       /* page background */
-  --cream-deep: #ECEEF6;
-  --paper: #ffffff;
-  --line: #E3E6F0;
+  --ink: #111111;
+  --ink-soft: #525252;
+  --ink-mute: #A3A3A3;
+  --cream: #FFFFFF;
+  --cream-deep: #F5F5F4;
+  --paper: #FFFFFF;
+  --line: #E7E5E4;
 
-  /* Brand — AI violet + buzz amber */
-  --accent: #6D5EF6;
-  --accent-dark: #5446D9;
-  --ember: #FF9F40;
-  --gold: #FF9F40;
-  --chili-oil: linear-gradient(125deg, #6D5EF6 0%, #9D7CF9 45%, #FF9F40 100%);
-  --ink-grad: linear-gradient(160deg, #20223A 0%, #12131C 100%);
+  --accent: #0D7D4D;
+  --accent-dark: #065F3A;
+  --ember: #0D7D4D;
+  --gold: #D97706;
+  --chili-oil: linear-gradient(135deg, #0D7D4D 0%, #16A34A 100%);
+  --ink-grad: linear-gradient(160deg, #0A0A0A 0%, #141414 100%);
 
-  --shadow-accent: 0 14px 32px rgba(109,94,246,.28);
+  --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
+  --shadow-md: 0 4px 16px rgba(0,0,0,.07);
+  --shadow-lg: 0 12px 36px rgba(0,0,0,.10);
+  --shadow-accent: 0 6px 20px rgba(13,125,77,.18);
 }
