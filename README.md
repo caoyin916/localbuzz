@@ -1,6 +1,6 @@
-# Local Buzz Marketing landing page
+# LocalBuzz Marketing landing page
 
-The marketing/sales site for **Local Buzz Marketing** — the all-in-one platform
+The marketing/sales site for **LocalBuzz Marketing** — the all-in-one platform
 (website + online ordering + AI social media + AI Google review management)
 sold to the restaurants whose sites are built from this repo.
 
@@ -19,7 +19,7 @@ page-specific styles (`css/landing.css`).
 | Path | Purpose |
 |---|---|
 | `index.html` | The full landing page (header, hero, features, sample sites, FAQ, demo form, footer) |
-| `css/theme.css` | Local Buzz Marketing brand palette (violet/amber) — overrides the "Chili Oil & Porcelain" tokens from `../template/css/styles.css` |
+| `css/theme.css` | LocalBuzz Marketing brand palette (violet/amber) — overrides the "Chili Oil & Porcelain" tokens from `../template/css/styles.css` |
 | `css/landing.css` | Page-specific layout/styles (hero mockups, pillar grid, comparison table, FAQ accordion, etc.) |
 
 ## Running locally
