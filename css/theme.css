@@ -1,22 +1,27 @@
-/* ===== Professional Green Theme ===== */
+/* ===== LocalBuzz Marketing — Navy + Orange Theme =====
+   Real brand colors sampled from the LocalBuzz logo and business card:
+   navy ink, orange accent (the "buzz" wordmark + pin icon), and a
+   vivid royal blue (the business card's corner shape), carried through
+   the vendored template's --chili-oil gradient. */
 :root {
-  --ink: #111111;
-  --ink-soft: #525252;
-  --ink-mute: #A3A3A3;
-  --cream: #FFFFFF;
-  --cream-deep: #F5F5F4;
+  --ink: #123159;
+  --ink-soft: #565B72;
+  --ink-mute: #9498AC;
+  --cream: #F6F7FB;
+  --cream-deep: #ECEEF6;
   --paper: #FFFFFF;
-  --line: #E7E5E4;
+  --line: #E3E6F0;
 
-  --accent: #0D7D4D;
-  --accent-dark: #065F3A;
-  --ember: #0D7D4D;
-  --gold: #D97706;
-  --chili-oil: linear-gradient(135deg, #0D7D4D 0%, #16A34A 100%);
-  --ink-grad: linear-gradient(160deg, #0A0A0A 0%, #141414 100%);
+  --accent: #F5721A;
+  --accent-dark: #D65E0E;
+  --ember: #FF914C;
+  --gold: #FBBF24;
+  --royal: #5170FF;
+  --chili-oil: linear-gradient(125deg, #5170FF 0%, #F5721A 100%);
+  --ink-grad: linear-gradient(160deg, #163B66 0%, #081524 100%);
 
   --shadow-sm: 0 1px 3px rgba(0,0,0,.06);
   --shadow-md: 0 4px 16px rgba(0,0,0,.07);
   --shadow-lg: 0 12px 36px rgba(0,0,0,.10);
-  --shadow-accent: 0 6px 20px rgba(13,125,77,.18);
+  --shadow-accent: 0 6px 20px rgba(245,114,26,.20);
 }

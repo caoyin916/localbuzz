@@ -24,7 +24,7 @@ Everything renders from a single [index.html](index.html). The interesting struc
 ### CSS layering (order matters — see the `<link>` order in the `<head>`)
 
 1. **[css/styles.css](css/styles.css)** — the shared "restaurant template" design system. Defines all the `--` design tokens, the original "Chili Oil & Porcelain" (red/amber) palette, and every reusable component class: `.wrap`, `.btn` / `.btn--ghost` / `.btn--lg`, `.section-eyebrow` / `.section-title` / `.section-lead`, `.feature` / `.feature--reverse`, `.review-grid`, `.contact-form`, header/footer, shadows, radius, fonts.
-2. **[css/theme.css](css/theme.css)** — re-declares the brand color tokens only (`--accent`, `--ember`, `--chili-oil` gradient, etc.) to a violet + amber SaaS palette. It deliberately **does not** touch typography, radius, or shadow shapes so the shared components keep working unchanged.
+2. **[css/theme.css](css/theme.css)** — re-declares the brand color tokens (`--accent`, `--ember`, `--royal`, the `--chili-oil` gradient, `--ink`/`--ink-grad`, plus its own neutral `--shadow-sm/md/lg`) to LocalBuzz Marketing's real navy + orange + royal-blue palette, sampled from the logo and business card in `logo/`. It deliberately does not touch typography or radius, so the shared components keep working unchanged.
 3. **[css/landing.css](css/landing.css)** — page-specific layout for this landing page's unique sections, all namespaced with the `bz-` prefix (`.bz-hero`, `.bz-pillar-grid`, `.bz-compare`, `.bz-faq`, `.bz-steps`, browser/phone mockups, etc.). It also hard-overrides a few places where `styles.css` baked the red color in literally.
 
 **Implication:** to recolor the brand, edit tokens in `theme.css`. To restyle a shared component (button, feature band), edit `styles.css` (affects the whole template family). To touch a landing-only section, edit `landing.css` and keep the `bz-` prefix.
@@ -44,9 +44,19 @@ The `#demoForm` posts to **Web3Forms** (`api.web3forms.com`). Submission is inte
 
 - Landing-page-specific CSS classes use the `bz-` prefix; shared/template classes do not.
 - Sections carry `data-screen-label="…"` attributes (used by the preview/tooling that frames the page) — preserve them when adding sections.
-- Cache-busting is manual via query strings on asset links (e.g. `styles.css?v=2`, `reveal.js?v=1`). Bump the `?v=` when changing a cached asset.
+- Cache-busting is manual via query strings on asset links. The three CSS files are bumped together (currently `?v=10`); `img/` assets carry their own independent `?v=`.
+
+## Logo assets
+
+[img/](img/) is a small, git-tracked folder holding only the site's actual referenced image assets, derived from files in the untracked `logo/` working folder:
+- `img/logo-icon.png` — a square crop of the pin+wifi icon from `logo/logo.png`, flattened onto white. Used for the header/footer `.brand-mark` badge, the favicon, and the apple-touch-icon.
+- `img/og-image.png` — the horizontal `logo/assets/logo-v2.png` lockup composited onto a navy card, sized 1200×630. Used for `og:image`/`twitter:image`.
+
+`images/` (note the different name, no relation to `img/`) holds the *client* sample-site logos (`yobowl-logo.png`, `hansnoodle-logo.png`) shown in the Sample Sites cards — unrelated to LocalBuzz's own branding above.
+
+If the LocalBuzz brand assets change, regenerate the two `img/` files from `logo/` and bump their `?v=`; don't hand-edit them.
 
 ## Before going live (open items)
 
 - Replace the Web3Forms `access_key` placeholder in `index.html`.
-- The "Sample Restaurant Sites" section currently showcases only Yo Bowl (`yobowl.com`); update as new client sites launch.
+- The "Sample Restaurant Sites" section now showcases Yo Bowl and Han's Noodles & Dumplings; add more `.bz-site-card` entries (with `.bz-site-preview--logo` + real logo image) as new client sites launch, and adjust the `.bz-sites-grid--two`/`--single` modifier as the count changes.

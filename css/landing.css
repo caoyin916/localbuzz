@@ -1,14 +1,14 @@
 /* ===== Local Buzz Marketing — landing page styles ===== */
 
 /* ---------- Global re-tints ---------- */
-.feature-media::before { border-color: rgba(13,125,77,.18); }
-.review-card::before { color: rgba(13,125,77,.07); }
+.feature-media::before { border-color: rgba(245,114,26,.18); }
+.review-card::before { color: rgba(245,114,26,.07); }
 .contact-form input:focus,
 .contact-form select:focus,
 .contact-form textarea:focus {
   outline: none;
   border-color: var(--accent);
-  box-shadow: 0 0 0 3px rgba(13,125,77,.10);
+  box-shadow: 0 0 0 3px rgba(245,114,26,.10);
 }
 .contact-form select {
   width: 100%; padding: 14px 16px;
@@ -17,11 +17,28 @@
   background: #fff; color: var(--ink);
 }
 
+/* ---------- Brand mark (logo icon image, replaces the "LB"-less plain text) ---------- */
+.brand-mark {
+  background-image: none;
+  background: var(--paper);
+  padding: 5px;
+  box-shadow: var(--shadow-sm), inset 0 0 0 1px var(--line);
+  overflow: hidden;
+}
+.brand-mark img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+/* ---------- Footer text on the navy --ink-grad background ---------- */
+.site-footer { color: #B9C4D6; }
+.footer-grid a { color: #B9C4D6; }
+.footer-bottom { border-top-color: #1C3A5F; color: #8C99AD; }
+.footer-bottom .owner-login { color: #42618F; }
+.footer-bottom .owner-login:hover { color: #8C99AD; }
+
 /* ---------- Hero ---------- */
 .bz-hero {
   position: relative;
   padding: 100px 0 80px;
-  background: #0A0A0A;
+  background-image: var(--ink-grad);
   color: #fff;
   text-align: center;
   overflow: hidden;
@@ -62,7 +79,7 @@
 }
 .bz-hero-center h1 em {
   font-style: normal;
-  color: #4ADE80;
+  color: var(--ember);
 }
 .bz-hero-center p {
   font-size: 18px;
@@ -98,7 +115,7 @@
   color: rgba(255,255,255,.35);
 }
 .bz-hero-proof span { display: inline-flex; align-items: center; gap: 8px; }
-.bz-hero-proof span::before { content: "✓"; color: #4ADE80; font-size: 13px; }
+.bz-hero-proof span::before { content: "✓"; color: var(--ember); font-size: 13px; }
 
 @media (max-width: 860px) {
   .bz-hero { padding: 72px 0 56px; }
@@ -165,7 +182,7 @@
 }
 .section-eyebrow::before,
 .center .section-eyebrow::after { display: none; }
-.center .section-eyebrow { padding-left: 0; border-left: none; padding: 5px 14px; border: 1px solid rgba(13,125,77,.25); border-radius: 4px; }
+.center .section-eyebrow { padding-left: 0; border-left: none; padding: 5px 14px; border: 1px solid rgba(245,114,26,.25); border-radius: 4px; }
 
 /* ---------- Problem + pillar cards ---------- */
 .bz-transition { margin-top: 18px; color: var(--ink); }
@@ -214,7 +231,7 @@
   content: "✓"; flex: 0 0 auto; margin-top: 1px;
   display: inline-flex; align-items: center; justify-content: center;
   width: 20px; height: 20px; border-radius: 50%;
-  background: rgba(13,125,77,.10); color: var(--accent);
+  background: rgba(245,114,26,.10); color: var(--accent);
   font-size: 11px; font-weight: 800;
 }
 .feature--reverse { grid-template-columns: 1fr 1.05fr; }
@@ -269,7 +286,7 @@
   display: block; font-family: var(--font-ui); font-size: 10px; font-weight: 700;
   letter-spacing: .12em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px;
 }
-.bz-mock-reply .bz-mock-line { background: rgba(13,125,77,.10); }
+.bz-mock-reply .bz-mock-line { background: rgba(245,114,26,.10); }
 
 .bz-mock-toast {
   background: var(--ink); color: #fff; border-radius: var(--radius);
@@ -409,8 +426,7 @@
 /* ---------- Final CTA band ---------- */
 .bz-cta-band {
   position: relative;
-  background: #0A0A0A;
-  background-image: none;
+  background-image: var(--ink-grad);
   color: #fff; overflow: hidden;
 }
 .bz-cta-band::before {
@@ -423,7 +439,7 @@
 .bz-cta-band > .wrap { position: relative; z-index: 1; }
 .bz-cta-band h2 { color: #fff; }
 .bz-cta-band .section-lead { color: rgba(255,255,255,.55); max-width: 540px; }
-.bz-cta-band .section-eyebrow { color: #4ADE80; border-color: #4ADE80; background: none; border: none; padding: 0; padding-left: 14px; border-left: 3px solid #4ADE80; border-radius: 0; }
+.bz-cta-band .section-eyebrow { color: var(--ember); border-color: var(--ember); background: none; border: none; padding: 0; padding-left: 14px; border-left: 3px solid var(--ember); border-radius: 0; }
 .center .bz-cta-band .section-eyebrow { border-left: none; padding-left: 0; }
 
 .bz-demo-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 40px; align-items: start; margin-top: 28px; }
@@ -490,7 +506,7 @@
 }
 .bz-site-mock-hero {
   height: 80px;
-  background: linear-gradient(135deg, #111 0%, #1e3a2f 100%);
+  background: linear-gradient(135deg, #111 0%, #16283f 100%);
 }
 .bz-site-attrs { display: grid; gap: 8px; }
 .bz-site-attr {
@@ -574,8 +590,8 @@
   letter-spacing: .06em; text-transform: uppercase;
   padding: 3px 8px; border-radius: 4px;
 }
-.bz-badge--live { background: rgba(13,125,77,.12); color: var(--accent); }
-.bz-badge--sched { background: rgba(13,125,77,.06); color: var(--accent); border: 1px solid rgba(13,125,77,.2); }
+.bz-badge--live { background: rgba(245,114,26,.12); color: var(--accent); }
+.bz-badge--sched { background: rgba(245,114,26,.06); color: var(--accent); border: 1px solid rgba(245,114,26,.2); }
 .bz-badge--ai { background: var(--cream-deep); color: var(--ink-mute); border: 1px solid var(--line); }
 .bz-mock-mini-stats {
   display: flex; gap: 0;
